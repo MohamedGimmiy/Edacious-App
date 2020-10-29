@@ -21,13 +21,13 @@ Edacious app is an open source template PSD template that I converted to ionic a
     - PSD template
     - assets folder
 
-**Usage**
-it is used as a reference for any ionic developer as it solved these issues
-    - element positioning of (relative and obsolute)
-    - Which elements to be extracted from PSD
-    - Angular routing
-    - Chat UI formation
-    - Javascript tips and tricks
+### Usage
+it is used as a reference for any ionic developer as it solved these issues:
+    * element positioning of (relative and obsolute)
+    * Which elements to be extracted from PSD
+    * Angular routing
+    * Chat UI formation
+    * Javascript tips and tricks
 
 
 ## How to install
