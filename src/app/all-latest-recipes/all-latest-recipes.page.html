@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      <ion-img  src="../../assets/imgs/Sublogo.png"></ion-img>
+    </ion-title>
+    <ion-button color="light" fill="clear" slot="end">
+      <ion-icon name="earth" slot="icon-only"></ion-icon>
+    </ion-button>
+    <ion-button slot="end" fill="clear" color="light">
+      <ion-icon name="search" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="padding: 0">
+  <div class="background">
+    <h4 style="text-align: center; margin-bottom: 5px; margin-top: 0px; padding-top: 15px;">All the latest recipes</h4>
+    <h6 style="text-align: center; margin-top: 5px;">Find all the recent & trending food recioe below</h6>
+    <ion-card button style="margin-top: 10px" routerLink="/recipe-details">
+      <!--Position a fab button on a card using z-index and position: absolute-->
+      <ion-fab-button
+        style="position: absolute; top: 130px; right: 30px; z-index: 3">
+        <ion-fab-button color="light">
+          <ion-icon color="primary" name="heart"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-button>
+      <ion-img src="../../assets/imgs/recipe1.jpg"></ion-img>
+      <ion-card-header style="padding: 0; margin-left: 10px">
+        <h3>Avocado Ice Cream</h3>
+        <p>
+          <span style="color: crimson">Nam dapidu</span> creadted this recipe
+        </p>
+      </ion-card-header>
+    </ion-card>
+    <ion-card button style="margin-top: 10px" routerLink="/recipe-details">
+      <ion-fab-button
+        style="position: absolute; top: 130px; right: 30px; z-index: 3"
+      >
+        <ion-fab-button color="primary">
+          <ion-icon name="heart"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-button>
+      <ion-img src="../../assets/imgs/recipe2.jpg"></ion-img>
+      <ion-card-header style="padding: 0; margin-left: 10px">
+        <h3>Ice Cream Truffles</h3>
+        <p><span style="color: crimson">Breyers</span> creadted this recipe</p>
+      </ion-card-header>
+    </ion-card>
+    <ion-card button style="margin-top: 10px" routerLink="/recipe-details">
+      <ion-fab-button
+        style="position: absolute; top: 130px; right: 30px; z-index: 3"
+      >
+        <ion-fab-button color="primary">
+          <ion-icon name="heart"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-button>
+      <ion-img src="../../assets/imgs/recipe3.jpg"></ion-img>
+      <ion-card-header style="padding: 0; margin-left: 10px">
+        <h3>Avocado Ice Cream</h3>
+        <p>
+          <span style="color: crimson">Nam dapidu</span> creadted this recipe
+        </p>
+      </ion-card-header>
+    </ion-card>
+  </div>
+</ion-content>

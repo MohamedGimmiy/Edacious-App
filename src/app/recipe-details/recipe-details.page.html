@@ -1,0 +1,168 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button >
+        Return
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      <ion-img src="../../assets/imgs/Sublogo.png"></ion-img>
+    </ion-title>
+    <ion-button slot="end" fill='clear' color="light">
+      <ion-icon slot="icon-only" name="earth"></ion-icon>
+    </ion-button>
+    <ion-button slot="end" fill="clear"  color="light">
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+        <!-- fab placed to the bottom end -->
+        <ion-fab  vertical="center" horizontal="end" slot="fixed">
+          <ion-fab-button color="light">
+            <ion-icon color="primary"  name="share-social"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+  <ion-segment scrollable color="primary" (ionChange)="select($event.target.value)" value="Direction" >
+    <ion-segment-button value="Direction">
+      <ion-label>Direction</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Ingredient">
+      <ion-label>Ingredient</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Reviews">
+      <ion-label>Reviews</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="AoutAuthor">
+      <ion-label>AoutAuthor</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div id="backgroundAll">
+    <!-- recipe Image -->
+    <ion-img src="../../assets/imgs/ingredientImage.jpg"></ion-img>
+    <!--Put a layer on layer -->
+    <ion-grid style="position: relative; top: -30px;">
+      <ion-row>
+        <ion-col size='12'>
+          <ion-img class="bk" style="position: relative; z-index: 2;" src="../../assets/imgs/reciptbackground.png"></ion-img>
+          <!-- Write on a layer -->
+
+          <!-------------------------------------Direction section1-------------------------------------->
+          <div id="Direction"*ngIf="selector == 'Direction'" >
+            <h3 style="padding: 20px; position: absolute; top: 8%; z-index: 5;">Lemon Drink </h3>
+            <p style="opacity: .5; line-height: 25px; padding: 20px; position: absolute; top: 14%; z-index: 5;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.   </p>  
+          </div>
+
+          <!------------------------------------Ingredients section2------------------------------------>
+          <div id="Ingredients" *ngIf="selector == 'Ingredient'">
+            <ion-list style="margin: 20px; position: absolute; top: 50px; z-index: 2;">
+              <ion-item lines='full'>
+                <ion-thumbnail slot="start">
+                  <ion-img src="../../assets/imgs/thumb1.jpg"></ion-img>
+
+                </ion-thumbnail>
+                <h5 >Fresh Lemon <br><span style="color: crimson;">200 <span style="color:grey; opacity: .5;">Gram</span></span></h5>
+
+              </ion-item>
+              <ion-item lines='full'>
+                <ion-thumbnail slot="start">
+                <ion-img src="../../assets/imgs/thumb2.jpg"></ion-img>
+                
+              </ion-thumbnail>
+              <h5>Ice Cube <br><span style="color: crimson;">300 <span style="color: grey; opacity: .5;">Gram</span></span></h5>
+              </ion-item>
+              <ion-item lines='full'>
+                <ion-thumbnail slot="start">
+                <ion-img src="../../assets/imgs/thumb3.jpg"></ion-img>
+              </ion-thumbnail>
+              <h5>Water <br><span style="color: crimson;">1000 <span style="color: grey; opacity: .5;">Gram</span></span></h5>
+              </ion-item>
+              <ion-item lines='full'>
+                <ion-thumbnail slot="start">
+                <ion-img src="../../assets/imgs/thumb4.jpg"></ion-img>
+              </ion-thumbnail>
+              <h5>Salt <br><span style="color: crimson;">4 <span style="color: grey; opacity: .5;">Spoon</span></span></h5>
+
+              </ion-item>
+            </ion-list>
+          </div>
+          <!-------------------------------------Reviews Section3 ----------------------------------->
+          <div id="Reviews" *ngIf="selector == 'Reviews'">
+            <ion-list style="padding: 20px; position: absolute; top: 8%; z-index: 15;">
+              <ion-item  lines="none" style="background-color: white; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .3);">
+                <ion-chip  slot="start" style="color: white; background-color: orange;">
+                  <ion-label>4.5</ion-label>
+                  <ion-icon color="light" name="star"></ion-icon>
+                </ion-chip>
+                <span style="color: grey; opacity: .7;">from 99 reviews</span>
+                <ion-avatar slot="end">
+                  <ion-img src="../../assets/imgs/Review.png"></ion-img>
+                </ion-avatar>
+              </ion-item>
+                <!--Repeat cards-->
+                <ion-card>
+                  <ion-item>
+                    <ion-avatar slot="start">
+                      <ion-img src="../../assets/imgs/Review1.png"></ion-img>
+                    </ion-avatar>
+                    <ion-label> Chris Howell
+                      <ion-icon color="warning" name="star"></ion-icon>
+                     <span style="color: grey; opacity: .5;">4.5</span> <br>
+                    </ion-label>
+                  </ion-item>
+                  <ion-card-content>
+                    Nice drinks I loved them.
+                  </ion-card-content>
+                </ion-card>
+                <ion-card>
+                  <ion-item>
+                    <ion-avatar slot="start">
+                      <ion-img src="../../assets/imgs/Review1.png"></ion-img>
+                    </ion-avatar>
+                    <ion-label> Chris Howell
+                      <ion-icon color="warning" name="star"></ion-icon>
+                      <span style="color: grey; opacity: .5;">4.5</span> <br>
+                    </ion-label>
+                  </ion-item>
+                  <ion-card-content>
+                    Ionic has nine default colors that can be used to change the color of many components. Each color is actually a collection of multiple properties, including a shade and tint, used throughout Ionic.
+                  </ion-card-content>
+                </ion-card>
+                <ion-card>
+                  <ion-item>
+                    <ion-avatar slot="start">
+                      <ion-img src="../../assets/imgs/Review1.png"></ion-img>
+                    </ion-avatar>
+                    <ion-label> Chris Howell
+                      <ion-icon color="warning" name="star"></ion-icon>
+                      <span style="color: grey; opacity: .5;">4.5</span> <br>
+                    </ion-label>
+                  </ion-item>
+                  <ion-card-content>
+                    Ionic has nine default colors that can be used to change the color of many components. Each color is actually a collection of multiple properties, including a shade and tint, used throughout Ionic.
+                  </ion-card-content>
+                </ion-card>
+              
+                <ion-card>
+                  <ion-item>
+                    <ion-avatar slot="start">
+                      <ion-img src="../../assets/imgs/Review1.png"></ion-img>
+                    </ion-avatar>
+                    <ion-label> Chris Howell
+                      <ion-icon color="warning" name="star"></ion-icon>
+                      <span style="color: grey; opacity: .5;">4.5</span> <br>
+                    </ion-label>
+                  </ion-item>
+                  <ion-card-content>
+                    Ionic has nine default colors that can be used to change the color of many components. Each color is actually a collection of multiple properties, including a shade and tint, used throughout Ionic.
+                  </ion-card-content>
+                </ion-card>
+              </ion-list>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

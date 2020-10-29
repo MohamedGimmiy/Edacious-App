@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title class="ion-text-center">
+      <ion-img  src="../../assets/imgs/Sublogo.png"></ion-img>
+    </ion-title>
+    <ion-button slot="end" fill='clear' color="light">
+      <ion-icon slot="icon-only" name="earth"></ion-icon>
+    </ion-button>
+    <ion-button slot="end" fill="clear"  color="light">
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment (ionChange)="segmentChanged($event)" value="Popular" >
+    <ion-segment-button value="Popular">
+      <ion-label>Popular Author</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Recent">
+      <ion-label>Recent People</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-list>
+    <ion-item lines='full'>
+      <ion-avatar slot="start">
+        <img src="../../assets/imgs/jenifer.png">
+      </ion-avatar>
+      <ion-label>Abbie Pratt <br><span><span style="color: crimson;">7101</span> <span style="opacity: .5;"> Recipes</span> </span>
+      </ion-label>
+      <ion-button color="primary" routerLink="/chat">
+        <ion-icon name="chatbubble-sharp"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item lines='full'>
+      <ion-avatar slot="start">
+        <img src="../../assets/imgs/user1.png">
+      </ion-avatar>
+      <ion-label>Abbie Pratt <br><span><span style="color: crimson;">7101</span> <span style="opacity: .5;"> Recipes</span> </span>
+      </ion-label>
+      <ion-button color="primary" >
+        <ion-icon name="chatbubble-sharp"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item lines='full'>
+      <ion-avatar slot="start">
+        <img src="../../assets/imgs/user2.png">
+      </ion-avatar>
+      <ion-label>Abbie Pratt <br><span><span style="color: crimson;">7101</span> <span style="opacity: .5;"> Recipes</span> </span>
+      </ion-label>
+      <ion-button color="primary" >
+        <ion-icon name="chatbubble-sharp"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item lines='full'>
+      <ion-avatar slot="start">
+        <img src="../../assets/imgs/user3.png">
+      </ion-avatar>
+      <ion-label>Abbie Pratt <br><span><span style="color: crimson;">7101</span> <span style="opacity: .5;"> Recipes</span> </span>
+      </ion-label>
+      <ion-button color="primary" >
+        <ion-icon name="chatbubble-sharp"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item lines='full'>
+      <ion-avatar slot="start">
+        <img src="../../assets/imgs/user4.png">
+      </ion-avatar>
+      <ion-label>Abbie Pratt <br><span><span style="color: crimson;">7101</span> <span style="opacity: .5;"> Recipes</span> </span>
+      </ion-label>
+      <ion-button color="primary" >
+        <ion-icon name="chatbubble-sharp"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item lines='full'>
+      <ion-avatar slot="start">
+        <img src="../../assets/imgs/user5.png">
+      </ion-avatar>
+      <ion-label>Abbie Pratt <br><span><span style="color: crimson;">7101</span> <span style="opacity: .5;"> Recipes</span> </span>
+      </ion-label>
+      <ion-button color="primary" >
+        <ion-icon name="chatbubble-sharp"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item lines='full'>
+      <ion-avatar slot="start">
+        <img src="../../assets/imgs/user6.png">
+      </ion-avatar>
+      <ion-label>Abbie Pratt <br><span><span style="color: crimson;">7101</span> <span style="opacity: .5;"> Recipes</span> </span>
+      </ion-label>
+      <ion-button color="primary" >
+        <ion-icon name="chatbubble-sharp"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

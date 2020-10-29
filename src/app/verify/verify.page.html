@@ -1,0 +1,96 @@
+<ion-content>
+  <!-- Background responsibility -->
+  <div>
+    <!-- fab placed to the bottom end -->
+    <ion-fab *ngIf='state===3' color="primary" vertical="bottom" horizontal="center" slot="fixed">
+      <ion-fab-button color="primay" routerLink="/home">
+        <ion-icon name="checkmark-done-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+    <ion-grid>
+      <!-------------Step 1------------->
+      <ion-row>
+        <ion-col size="10" offset="1">
+          <div>
+            <ion-progress-bar
+              style="margin-top: 50px; height: 10px"
+              color="primary"
+              value="0.33"
+            ></ion-progress-bar>
+            <ul>
+              <li style="color: crimson">Phone</li>
+              <li>Verify</li>
+              <li>Preference</li>
+            </ul>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="state === 1">
+        <ion-col class="ion-text-center" style="margin-top: 50px">
+          <div>
+              <ion-input
+                type="number"
+                name="phoneNumber"
+                placeholder="Enter your Phone Number" (ionChange)="onChange($event, 1)"></ion-input>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <!----------- Step 2 -------------->
+      <ion-row *ngIf="state === 2" class="ion-text-center">
+        <ion-col size="12" class="ion-text-center">
+          <h6>Enter the verified code you 've recieved</h6>
+        </ion-col>
+        <ion-col size="3"></ion-col>
+        <ion-col size="2">
+          <ion-item>
+            <ion-input (ionChange)='onChange($event, 2, 1)' min="00" max="99" type="number" placeholder="--">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="2">
+          <ion-item>
+            <ion-input min="00" max="99" (ionChange)='onChange($event, 2, 2)' type="number" placeholder="--">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="2">
+          <ion-item>
+            <ion-input min="00" max="99" (ionChange)='onChange($event, 2, 3)' type="number" placeholder="--">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <!-------------Step 3---------------->
+      <ion-row *ngIf="state === 3">
+        <ion-col class="ion-text-center">
+          <h5>what type of food you usually prefer?</h5>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="state === 3" no-padding>
+        <ion-col>
+          <ion-slides [options]="sliderConfig" pager="true">
+            <ion-slide>
+              <ion-card>
+                <ion-img src='../../assets/imgs/food1.jpg'>
+
+                </ion-img>
+                <ion-card-content>
+                  <h6>Protion</h6>
+                  <br />
+                  <p>
+                    Lorem Ipsum is simply, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book.
+                  </p>
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+          </ion-slides>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

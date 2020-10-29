@@ -1,0 +1,32 @@
+#background{
+    background-color:#f1f1f1;
+    height: auto;
+    width: 100%;
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: cover;
+}
+
+ion-row{
+    display: inline-block;
+}
+ion-col ion-img{
+    border-radius: 50%;
+}
+
+ion-item{
+    --background: transparent;
+}	
+
+ion-text.first{
+    background-color: #ee5d71;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+ion-text.second{
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+}

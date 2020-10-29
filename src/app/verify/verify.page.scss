@@ -1,0 +1,30 @@
+div{
+    background-image: url('../../assets//imgs/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+.cl{
+    color: crimson;
+}
+ion-slides {
+    height: 100%;
+  }
+  ion-card ion-img { width: 100%; height: 100%; }
+
+
+
